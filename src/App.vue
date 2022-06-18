@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="setTitle">Set Title</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  },
+  mounted() {
+
+  },
+  methods :{
+    setTitle(){
+      window.electronAPI.setTitle("New Title")
+    }
   }
 }
 </script>
